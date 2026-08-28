@@ -6,569 +6,20 @@
 
   <title>Jani | Software Developer Portfolio</title>
 
-  <meta
-    name="description"
-    content="Portfolio of Jani, a backend-oriented software developer and ICT Engineering student with an IT systems background."
-  >
-
+  <meta name="description" content="Portfolio of Jani, a backend-oriented software developer and ICT Engineering student with an IT systems background.">
   <meta name="author" content="Jax">
   <meta name="color-scheme" content="dark light">
   <meta name="theme-color" content="#0b1120">
 
   <meta property="og:title" content="Jani | Software Developer Portfolio">
-  <meta
-    property="og:description"
-    content="Backend development, databases, REST APIs, Linux, system integration and applied AI."
-  >
+  <meta property="og:description" content="Backend development, databases, REST APIs, Linux, system integration and applied AI.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jaxi84.github.io/">
 
-  <style>
-    :root {
-      color-scheme: dark;
-
-      --background: #080d18;
-      --surface: #101827;
-      --surface-alt: #172033;
-      /* Pehmennetty tekstin väri */
-      --text: #cbd5e1; 
-      /* Uusi muuttuja otsikoille ja boldatuille */
-      --text-bright: #e2e8f0; 
-      --muted: #a9b4c5;
-      --primary: #67e8f9;
-      --primary-strong: #22d3ee;
-      --secondary: #a78bfa;
-      --border: rgb(148 163 184 / 18%);
-      --shadow: 0 24px 60px rgb(0 0 0 / 25%);
-
-      --content-width: 1120px;
-      --radius: 1.25rem;
-      --transition: 180ms ease;
-    }
-
-    @media (prefers-color-scheme: light) {
-      :root {
-        color-scheme: light;
-
-        --background: #f8fafc;
-        --surface: #ffffff;
-        --surface-alt: #eef2f7;
-        --text: #334155; /* Tummempi harmaa vaaleaan teemaan */
-        --text-bright: #0f172a;
-        --muted: #526176;
-        --primary: #0369a1;
-        --primary-strong: #0284c7;
-        --secondary: #7c3aed;
-        --border: rgb(15 23 42 / 12%);
-        --shadow: 0 24px 60px rgb(15 23 42 / 10%);
-      }
-    }
-
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 6rem;
-    }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      overflow-x: hidden;
-      font-family:
-        Inter,
-        ui-sans-serif,
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        sans-serif;
-      line-height: 1.65;
-      color: var(--text);
-      background:
-        radial-gradient(
-          circle at 15% 10%,
-          rgb(34 211 238 / 12%),
-          transparent 28rem
-        ),
-        radial-gradient(
-          circle at 90% 25%,
-          rgb(167 139 250 / 10%),
-          transparent 25rem
-        ),
-        var(--background);
-    }
-
-    img,
-    svg {
-      display: block;
-      max-width: 100%;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button,
-    a {
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    :focus-visible {
-      outline: 3px solid var(--primary);
-      outline-offset: 4px;
-      border-radius: 0.35rem;
-    }
-
-    .container {
-      width: min(100% - 2rem, var(--content-width));
-      margin-inline: auto;
-    }
-
-    .skip-link {
-      position: fixed;
-      top: 1rem;
-      left: 1rem;
-      z-index: 1000;
-      padding: 0.7rem 1rem;
-      color: #001018;
-      background: var(--primary);
-      border-radius: 0.6rem;
-      transform: translateY(-160%);
-      transition: transform var(--transition);
-    }
-    
-    .skip-link:focus {
-      transform: translateY(0);
-    }
-    
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      border-bottom: 1px solid var(--border);
-      background: color-mix(in srgb, var(--background) 82%, transparent);
-      backdrop-filter: blur(18px);
-    }
-    
-    .navbar {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      min-height: 4.5rem;
-      gap: 1rem;
-    }
-    
-    .brand {
-      font-size: 1.15rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-    }
-    
-    .brand span {
-      color: var(--primary);
-    }
-    
-    .nav-toggle {
-      display: none;
-      padding: 0.65rem 0.8rem;
-      color: var(--text);
-      font: inherit;
-      font-weight: 700;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 0.7rem;
-      cursor: pointer;
-    }
-    
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 1.25rem;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-    
-    .nav-links a {
-      color: var(--muted);
-      font-size: 0.95rem;
-      font-weight: 650;
-      transition:
-        color var(--transition),
-        transform var(--transition);
-    }
-    
-    .nav-links a:hover {
-      color: var(--primary);
-    }
-    
-    .hero {
-      display: grid;
-      align-items: center;
-      min-height: calc(100svh - 4.5rem);
-      padding-block: clamp(5rem, 12vw, 9rem);
-    }
-    
-    .hero-content {
-      max-width: 880px;
-    }
-    
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.55rem;
-      margin: 0 0 1rem;
-      color: var(--primary);
-      font-size: 0.9rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-    
-    .eyebrow::before {
-      width: 2rem;
-      height: 2px;
-      content: "";
-      background: currentColor;
-    }
-    
-    /* Otsikoiden ja boldien väri pehmennetty */
-    h1, h2, h3, strong {
-      color: var(--text-bright);
-    }
-
-    h1, h2, h3 {
-      margin-top: 0;
-      line-height: 1.12;
-      text-wrap: balance;
-    }
-    
-    h1 {
-      max-width: 950px;
-      margin-bottom: 1.25rem;
-      font-size: clamp(2.8rem, 8vw, 6.5rem);
-      letter-spacing: -0.055em;
-    }
-    
-    h1 span {
-      color: var(--primary);
-    }
-    
-    h2 {
-      margin-bottom: 1rem;
-      font-size: clamp(2rem, 5vw, 3.4rem);
-      letter-spacing: -0.04em;
-    }
-    
-    h3 {
-      margin-bottom: 0.75rem;
-      font-size: 1.3rem;
-    }
-    
-    .hero-description {
-      max-width: 750px;
-      margin-bottom: 1.75rem;
-      color: var(--muted);
-      font-size: clamp(1.05rem, 2vw, 1.25rem);
-    }
-    
-    .button-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.85rem;
-      margin-top: 2rem;
-    }
-    
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 3rem;
-      padding: 0.75rem 1.15rem;
-      font-weight: 800;
-      border: 1px solid transparent;
-      border-radius: 0.8rem;
-      transition:
-        transform var(--transition),
-        background var(--transition),
-        border-color var(--transition);
-    }
-    
-    .button:hover {
-      transform: translateY(-2px);
-    }
-    
-    .button-primary {
-      color: #001018;
-      background: var(--primary);
-    }
-    
-    .button-primary:hover {
-      background: var(--primary-strong);
-    }
-    
-    .button-secondary {
-      color: var(--text);
-      background: var(--surface);
-      border-color: var(--border);
-    }
-    
-    .button-secondary:hover {
-      border-color: var(--primary);
-    }
-    
-    .quick-facts {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.65rem;
-      margin: 2.25rem 0 0;
-      padding: 0;
-      list-style: none;
-    }
-    
-    .quick-facts li,
-    .tag {
-      padding: 0.35rem 0.7rem;
-      color: var(--muted);
-      font-size: 0.85rem;
-      font-weight: 700;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 999px;
-    }
-    
-    main section {
-      padding-block: clamp(4.5rem, 9vw, 7rem);
-    }
-    
-    .section-heading {
-      max-width: 760px;
-      margin-bottom: 2.2rem;
-    }
-    
-    .section-heading p,
-    .card p,
-    .about-text,
-    .education-card p {
-      color: var(--muted);
-    }
-    
-    .project-grid,
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 1.25rem;
-    }
-    
-    .card {
-      position: relative;
-      overflow: hidden;
-      padding: clamp(1.4rem, 3vw, 2rem);
-      background:
-        linear-gradient(
-          145deg,
-          color-mix(in srgb, var(--surface) 96%, var(--primary) 4%),
-          var(--surface)
-        );
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      transition:
-        transform var(--transition),
-        border-color var(--transition);
-    }
-    
-    .card:hover {
-      border-color: color-mix(in srgb, var(--primary) 48%, var(--border));
-      transform: translateY(-4px);
-    }
-    
-    .card::after {
-      position: absolute;
-      top: -5rem;
-      right: -5rem;
-      width: 10rem;
-      height: 10rem;
-      pointer-events: none;
-      content: "";
-      background: rgb(103 232 249 / 6%);
-      border-radius: 50%;
-    }
-    
-    .project-card {
-      grid-column: span 6;
-    }
-    
-    .project-card.featured {
-      grid-column: span 7;
-    }
-    
-    .project-card.featured-secondary {
-      grid-column: span 5;
-    }
-    
-    .project-type {
-      display: inline-block;
-      margin-bottom: 0.8rem;
-      color: var(--primary);
-      font-size: 0.8rem;
-      font-weight: 850;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-    }
-    
-    .card-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 1.4rem;
-    }
-    
-    .card-links a {
-      color: var(--primary);
-      font-weight: 800;
-    }
-    
-    .card-links a:hover {
-      text-decoration: underline;
-      text-underline-offset: 0.25em;
-    }
-    
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin: 1.25rem 0 0;
-      padding: 0;
-      list-style: none;
-    }
-    
-    .skills-card {
-      grid-column: span 4;
-    }
-    
-    .skills-card ul {
-      margin: 0;
-      padding-left: 1.2rem;
-      color: var(--muted);
-    }
-    
-    .skills-card li + li {
-      margin-top: 0.4rem;
-    }
-    
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      align-items: start;
-      gap: 2rem;
-    }
-    
-    .about-text {
-      font-size: 1.05rem;
-    }
-    
-    .highlight-box {
-      padding: 1.5rem;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-left: 4px solid var(--primary);
-      border-radius: 0 var(--radius) var(--radius) 0;
-    }
-    
-    .highlight-box p {
-      margin: 0;
-      color: var(--muted);
-    }
-    
-    .education-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.25rem;
-    }
-    
-    .education-card {
-      padding: 1.5rem;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-    }
-    
-    .contact-section {
-      text-align: center;
-    }
-    
-    .contact-section .section-heading {
-      margin-inline: auto;
-    }
-    
-    footer {
-      padding-block: 2rem;
-      color: var(--muted);
-      text-align: center;
-      border-top: 1px solid var(--border);
-    }
-    
-    @media (max-width: 800px) {
-      .nav-toggle {
-        display: inline-flex;
-      }
-      
-      .nav-links {
-        position: absolute;
-        top: calc(100% + 0.5rem);
-        right: 0;
-        left: 0;
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        padding: 1rem;
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: 1rem;
-        box-shadow: var(--shadow);
-      }
-      
-      .nav-links.is-open {
-        display: flex;
-      }
-      
-      .nav-links a {
-        display: block;
-        padding: 0.6rem;
-      }
-      
-      .project-card,
-      .project-card.featured,
-      .project-card.featured-secondary,
-      .skills-card {
-        grid-column: 1 / -1;
-      }
-      
-      .about-grid,
-      .education-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-    
-    @media (prefers-reduced-motion: reduce) {
-      *,
-      *::before,
-      *::after {
-        scroll-behavior: auto !important;
-        transition-duration: 0.01ms !important;
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Estää vanhojen selaimien vilkkumisen (FOUC) -->
+  <script>document.documentElement.className = 'js';</script>
 </head>
   
 <body>
@@ -580,12 +31,7 @@
         Jani<span>.</span>
       </a>
       
-      <button
-        class="nav-toggle"
-        type="button"
-        aria-expanded="false"
-        aria-controls="primary-navigation"
-      >
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
         Menu
       </button>
       
@@ -594,6 +40,7 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#education">Education</a></li>
+        <li><a href="#training">Training</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -604,14 +51,11 @@
       <div class="container hero-content">
         <p class="eyebrow">Software development portfolio</p>
         
-        <h1>
-          Hi, I'm <span>Jani</span>
-        </h1>
+        <h1>Hi, I'm <span>Jani</span></h1>
         
         <p class="hero-description">
           <strong>Backend-oriented software developer and ICT Engineering student</strong>
-          with over three years of professional experience in IT services and
-          systems support.
+          with over three years of professional experience in IT services and systems support.
         </p>
         
         <p class="hero-description">
@@ -620,27 +64,9 @@
         </p>
         
         <div class="button-row">
-          <a class="button button-primary" href="#projects">
-            View projects
-          </a>
-          
-          <a
-            class="button button-secondary"
-            href="https://github.com/Jaxi84"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub profile
-          </a>
-          
-          <a
-            class="button button-secondary"
-            href="https://www.linkedin.com/in/jani-rekinen/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
+          <a class="button button-primary" href="#projects">View projects</a>
+          <a class="button button-secondary" href="https://github.com/Jaxi84" target="_blank" rel="noopener noreferrer">GitHub profile</a>
+          <a class="button button-secondary" href="https://www.linkedin.com/in/jani-rekinen/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
         
         <ul class="quick-facts" aria-label="Technical focus areas">
@@ -670,13 +96,11 @@
               experience comes from engineering studies, collaborative
               application projects and independent development.
             </p>
-            
             <p>
               My professional background includes IT services, Microsoft 365
               administration, user and device management, technical support,
               documentation and infrastructure-related work.
             </p>
-            
             <p>
               I also have experience in electronics manufacturing, functional
               testing, measurement and quality assurance. This helps me
@@ -711,146 +135,71 @@
         </div>
         
         <div class="project-grid">
+          <!-- ATM Group Project -->
           <article class="card project-card featured">
             <span class="project-type">Collaborative project</span>
             <h3>ATM Group Project</h3>
-            
             <p>
               A team-developed ATM simulator combining a C++ and Qt desktop
               client, Node.js and Express backend, REST API, MySQL database and
               a Linux-based deployment environment.
             </p>
-            
             <p>
               My main responsibilities included the database, virtual machines,
               backend environment, Docker services, domain configuration and
               TLS. Backend implementation, debugging and integration work were
               shared across the team.
             </p>
-            
             <ul class="tags" aria-label="ATM project technologies">
-              <li class="tag">C++</li>
-              <li class="tag">Qt</li>
-              <li class="tag">Node.js</li>
-              <li class="tag">Express</li>
-              <li class="tag">MySQL</li>
-              <li class="tag">Docker</li>
-              <li class="tag">Linux</li>
-              <li class="tag">TLS</li>
+              <li class="tag">C++</li><li class="tag">Qt</li><li class="tag">Node.js</li>
+              <li class="tag">Express</li><li class="tag">MySQL</li><li class="tag">Docker</li>
+              <li class="tag">Linux</li><li class="tag">TLS</li>
             </ul>
-            
             <div class="card-links">
-              <a
-                href="https://github.com/Jani-OAMK/ATM-group-project"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Repository
-              </a>
-              
-              <a
-                href="https://www.youtube.com/watch?v=w5b5Py__Tz0"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Project presentation
-              </a>
+              <a href="https://github.com/Jani-OAMK/ATM-group-project" target="_blank" rel="noopener noreferrer">Repository</a>
+              <a href="https://www.youtube.com/watch?v=w5b5Py__Tz0" target="_blank" rel="noopener noreferrer">Project presentation</a>
             </div>
           </article>
           
+          <!-- LifeHub -->
           <article class="card project-card featured-secondary">
             <span class="project-type">Independent project</span>
             <h3>LifeHub</h3>
-            
-            <p>
-              A mobile-oriented personal life management application built with
-              HTML, CSS and vanilla JavaScript.
-            </p>
-            
-            <p>
-              LifeHub includes reusable list logic, swipe interactions,
-              browser-based state persistence, exercise tracking and
-              Open-Meteo weather data.
-            </p>
-            
+            <p>A mobile-oriented personal life management application built with HTML, CSS and vanilla JavaScript.</p>
+            <p>LifeHub includes reusable list logic, swipe interactions, browser-based state persistence, exercise tracking and Open-Meteo weather data.</p>
             <ul class="tags" aria-label="LifeHub technologies">
-              <li class="tag">JavaScript</li>
-              <li class="tag">HTML</li>
-              <li class="tag">CSS</li>
-              <li class="tag">DOM APIs</li>
-              <li class="tag">localStorage</li>
-              <li class="tag">Open-Meteo</li>
+              <li class="tag">JavaScript</li><li class="tag">HTML</li><li class="tag">CSS</li>
+              <li class="tag">DOM APIs</li><li class="tag">localStorage</li><li class="tag">Open-Meteo</li>
             </ul>
-            
             <div class="card-links">
-              <a href="https://jaxi84.github.io/lifehub-proj/">
-                Live demo
-              </a>
-              
-              <a
-                href="https://github.com/Jaxi84/lifehub-proj"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Repository
-              </a>
-              
-              <a
-                href="https://www.youtube.com/watch?v=NFSRganMC8c"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Project presentation
-              </a>
+              <a href="https://jaxi84.github.io/lifehub-proj/">Live demo</a>
+              <a href="https://github.com/Jaxi84/lifehub-proj" target="_blank" rel="noopener noreferrer">Repository</a>
+              <a href="https://www.youtube.com/watch?v=NFSRganMC8c" target="_blank" rel="noopener noreferrer">Project presentation</a>
             </div>
           </article>
           
+          <!-- myApi -->
           <article class="card project-card">
             <span class="project-type">Study project</span>
             <h3>myApi</h3>
-            
-            <p>
-              A backend development study project focused on building a REST
-              API with Node.js, Express and MySQL.
-            </p>
-            
+            <p>A backend development study project focused on building a REST API with Node.js, Express and MySQL.</p>
             <ul class="tags" aria-label="myApi technologies">
-              <li class="tag">Node.js</li>
-              <li class="tag">Express</li>
-              <li class="tag">MySQL</li>
-              <li class="tag">SQL</li>
-              <li class="tag">REST API</li>
+              <li class="tag">Node.js</li><li class="tag">Express</li><li class="tag">MySQL</li>
+              <li class="tag">SQL</li><li class="tag">REST API</li>
             </ul>
-            
-            <div class="card-links">
-              <a href="https://github.com/Jaxi84">
-                Repository
-              </a>
-            </div>
+            <div class="card-links"><a href="https://github.com/Jaxi84">Repository</a></div>
           </article>
           
+          <!-- Linux Course Project -->
           <article class="card project-card">
             <span class="project-type">Course project</span>
             <h3>Linux Course Project</h3>
-            
-            <p>
-              Linux administration, Python, shell scripting, Streamlit,
-              automated tasks and processing of weather and air-quality data.
-            </p>
-            
+            <p>Linux administration, Python, shell scripting, Streamlit, automated tasks and processing of weather and air-quality data.</p>
             <ul class="tags" aria-label="Linux project technologies">
-              <li class="tag">Linux</li>
-              <li class="tag">Python</li>
-              <li class="tag">Shell</li>
-              <li class="tag">Streamlit</li>
-              <li class="tag">Automation</li>
+              <li class="tag">Linux</li><li class="tag">Python</li><li class="tag">Shell</li>
+              <li class="tag">Streamlit</li><li class="tag">Automation</li>
             </ul>
-            
-            <div class="card-links">
-              <a href="https://github.com/Jaxi84">
-                Repository
-              </a>
-            </div>
+            <div class="card-links"><a href="https://github.com/Jaxi84">Repository</a></div>
           </article>
         </div>
       </div>
@@ -861,84 +210,31 @@
         <div class="section-heading">
           <p class="eyebrow">Technical skills</p>
           <h2>Areas of experience and current development</h2>
-          <p>
-            My professional experience is strongest in IT services and systems
-            support. My software development experience comes primarily from
-            engineering studies, team projects and independent development.
-          </p>
         </div>
-        
         <div class="skills-grid">
           <article class="card skills-card">
             <h3>Backend and data</h3>
-            <ul>
-              <li>Node.js and Express</li>
-              <li>MySQL and SQL</li>
-              <li>REST APIs</li>
-              <li>Database design</li>
-              <li>System integration</li>
-              <li>Debugging</li>
-            </ul>
+            <ul><li>Node.js and Express</li><li>MySQL and SQL</li><li>REST APIs</li><li>Database design</li><li>System integration</li><li>Debugging</li></ul>
           </article>
-          
           <article class="card skills-card">
             <h3>Web development</h3>
-            <ul>
-              <li>JavaScript</li>
-              <li>HTML and CSS</li>
-              <li>DOM and browser APIs</li>
-              <li>Asynchronous data fetching</li>
-              <li>React through studies</li>
-              <li>Mobile-oriented interfaces</li>
-            </ul>
+            <ul><li>JavaScript</li><li>HTML and CSS</li><li>DOM and browser APIs</li><li>Asynchronous data fetching</li><li>React through studies</li><li>Mobile-oriented interfaces</li></ul>
           </article>
-          
           <article class="card skills-card">
             <h3>Infrastructure</h3>
-            <ul>
-              <li>Linux</li>
-              <li>Virtual machines</li>
-              <li>Docker</li>
-              <li>Domain and TLS configuration</li>
-              <li>Nginx</li>
-              <li>Git and GitHub</li>
-            </ul>
+            <ul><li>Linux</li><li>Virtual machines</li><li>Docker</li><li>Domain and TLS configuration</li><li>Nginx</li><li>Git and GitHub</li></ul>
           </article>
-          
           <article class="card skills-card">
             <h3>Programming</h3>
-            <ul>
-              <li>JavaScript</li>
-              <li>Java</li>
-              <li>Python</li>
-              <li>C++ and Qt</li>
-              <li>C fundamentals</li>
-              <li>Object-oriented programming</li>
-            </ul>
+            <ul><li>JavaScript</li><li>Java</li><li>Python</li><li>C++ and Qt</li><li>C fundamentals</li><li>Object-oriented programming</li></ul>
           </article>
-          
           <article class="card skills-card">
             <h3>Professional IT</h3>
-            <ul>
-              <li>Microsoft 365</li>
-              <li>Entra ID and Intune</li>
-              <li>2nd line technical support</li>
-              <li>User and device management</li>
-              <li>Technical documentation</li>
-              <li>IT lifecycle operations</li>
-            </ul>
+            <ul><li>Microsoft 365</li><li>Entra ID and Intune</li><li>2nd line technical support</li><li>User and device management</li><li>Technical documentation</li><li>IT lifecycle operations</li></ul>
           </article>
-          
           <article class="card skills-card">
             <h3>Applied AI</h3>
-            <ul>
-              <li>AI-assisted development</li>
-              <li>Code analysis and debugging</li>
-              <li>Implementation comparison</li>
-              <li>Technical research</li>
-              <li>Documentation support</li>
-              <li>Critical review and testing</li>
-            </ul>
+            <ul><li>AI-assisted development</li><li>Code analysis and debugging</li><li>Implementation comparison</li><li>Technical research</li><li>Documentation support</li><li>Critical review and testing</li></ul>
           </article>
         </div>
       </div>
@@ -950,44 +246,45 @@
           <p class="eyebrow">Education</p>
           <h2>Technical studies and professional development</h2>
         </div>
-        
         <div class="education-grid">
           <article class="education-card">
             <h3>Bachelor of Engineering, Information Technology</h3>
-            <p>
-              <strong>Oulu University of Applied Sciences</strong><br>
-              Expected graduation: 2028
-            </p>
-            <p>
-              Focus on software development, databases, APIs, Java, frontend
-              development, Linux administration, cloud services and
-              project-based learning.
-            </p>
+            <p><strong>Oulu University of Applied Sciences</strong><br>Expected graduation: 2028</p>
+            <p>Focus on software development, databases, APIs, Java, frontend development, Linux administration, cloud services and project-based learning.</p>
           </article>
           
           <article class="education-card">
-            <h3>
-              Vocational Qualification in Information and Communications
-              Technology
-            </h3>
-            <p>
-              <strong>OSAO, Electronics Technician</strong><br>
-              2021 to 2022
-            </p>
-            <p>
-              Embedded systems, electronics manufacturing, installations,
-              testing, measurement, commissioning and quality assurance.
-            </p>
-            
+            <h3>Vocational Qualification in ICT</h3>
+            <p><strong>OSAO, Electronics Technician</strong><br>2021 to 2022</p>
+            <p>Embedded systems, electronics manufacturing, installations, testing, measurement, commissioning and quality assurance.</p>
             <div class="card-links">
-              <a
-                href="https://github.com/Jaxi84/Theses"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Earlier projects archive
-              </a>
+              <a href="https://github.com/Jaxi84/Theses" target="_blank" rel="noopener noreferrer">Earlier projects archive</a>
             </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="training">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Continuous Learning</p>
+          <h2>Courses & Training</h2>
+        </div>
+        
+        <div class="education-grid">
+          <article class="education-card full-width">
+            <h3>AI & Prompt Engineering</h3>
+            <p><strong>Eduhouse</strong> | Specialized training courses aimed at maximizing efficiency and implementation of AI tools.</p>
+            
+            <ul class="training-list">
+              <li><span class="date">2026-08-26</span> <span class="course-name">ChatGPT 3 – promptit ja projektit</span></li>
+              <li><span class="date">2026-08-25</span> <span class="course-name">Hyvä promptaus 3 – mestaruusluokka</span></li>
+              <li><span class="date">2026-08-18</span> <span class="course-name">Hyvä promptaus 2 – ennakoi ja ohjaa tekoälyä</span></li>
+              <li><span class="date">2026-06-09</span> <span class="course-name">ChatGPT 3 – mestaruusluokka ja agentit</span></li>
+              <li><span class="date">2026-06-04</span> <span class="course-name">ChatGPT 2 – käyttö työn tehostajana!</span></li>
+              <li><span class="date">2026-06-03</span> <span class="course-name">ChatGPT 1 – perusteet</span></li>
+            </ul>
           </article>
         </div>
       </div>
@@ -998,30 +295,11 @@
         <div class="section-heading">
           <p class="eyebrow">Contact</p>
           <h2>Let's connect</h2>
-          <p>
-            You can explore my source code on GitHub or view my professional
-            background on LinkedIn.
-          </p>
+          <p>You can explore my source code on GitHub or view my professional background on LinkedIn.</p>
         </div>
-        
         <div class="button-row" style="justify-content: center">
-          <a
-            class="button button-primary"
-            href="https://github.com/Jaxi84"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
-          
-          <a
-            class="button button-secondary"
-            href="https://www.linkedin.com/in/jani-rekinen/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
+          <a class="button button-primary" href="https://github.com/Jaxi84" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="button button-secondary" href="https://www.linkedin.com/in/jani-rekinen/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
       </div>
     </section>
@@ -1029,35 +307,11 @@
   
   <footer>
     <div class="container">
-      <p>
-        © <span id="current-year"></span> Jani.
-        Built with semantic HTML, modern CSS and vanilla JavaScript.
-      </p>
+      <p>© <span id="current-year"></span> Jani. Built with semantic HTML, modern CSS and vanilla JavaScript.</p>
     </div>
   </footer>
   
-  <script>
-    const navToggle = document.querySelector(".nav-toggle");
-    const navigation = document.querySelector(".nav-links");
-    const navigationLinks = navigation.querySelectorAll("a");
-    const currentYear = document.querySelector("#current-year");
-    
-    currentYear.textContent = new Date().getFullYear();
-    
-    navToggle.addEventListener("click", () => {
-      const isOpen = navigation.classList.toggle("is-open");
-      
-      navToggle.setAttribute("aria-expanded", String(isOpen));
-      navToggle.textContent = isOpen ? "Close" : "Menu";
-    });
-    
-    navigationLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        navigation.classList.remove("is-open");
-        navToggle.setAttribute("aria-expanded", "false");
-        navToggle.textContent = "Menu";
-      });
-    });
-  </script>
+  <!-- Tässä yhdistetään erillinen JavaScript-tiedosto -->
+  <script src="js/main.js" defer></script>
 </body>
 </html>
