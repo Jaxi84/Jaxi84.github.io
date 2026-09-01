@@ -459,6 +459,50 @@ main section:nth-child(even) {
   border-radius: 999px;
 }
 
+/* TL;DR */
+
+.tldr-lead {
+  max-width: 820px;
+
+  color: var(--muted);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.stat {
+  padding: 1.25rem;
+
+  text-align: center;
+
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-small);
+}
+
+.stat-number {
+  display: block;
+  margin-bottom: 0.25rem;
+
+  color: var(--primary);
+
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
+  font-weight: 850;
+  letter-spacing: -0.02em;
+}
+
+.stat-label {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 650;
+}
+
 /* About */
 
 .about-grid {
