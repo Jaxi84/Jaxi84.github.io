@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Detailed case study of the ATM Group Project by Jani Rekinen and a four-person OAMK team.">
+    <title>ATM Group Project | Jani Rekinen</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="project-site">
+    <header class="site-header">
+        <nav class="nav container" aria-label="Project navigation"><a class="brand"
+                href="../index.html">JR<span>.</span></a><a class="back-link" href="index.html">← All projects</a></nav>
+    </header>
+    <main>
+        <section class="case-hero case-hero-atm">
+            <div class="container case-hero-inner">
+                <p class="eyebrow eyebrow-light">01 / University group project · OAMK</p>
+                <h1>ATM Group<br><em>Project</em></h1>
+                <p class="case-lead">My first larger software project: a Qt desktop client, REST API, relational
+                    database and internet-accessible Linux deployment working as one system.</p>
+                <div class="case-meta"><span>Team of four</span><span>IN00ED14 · 15 ECTS</span><span>Individual grade 5
+                        /
+                        5</span><span>Eight-week project</span></div>
+            </div>
+        </section>
+        <section class="section case-section">
+            <div class="container case-grid">
+                <div>
+                    <p class="eyebrow">The project</p>
+                    <h2>A complete path from<br><em>interface to data.</em></h2>
+                </div>
+                <div class="case-copy">
+                    <p class="lead">In eight weeks, our four-person team designed, implemented, integrated and
+                        documented an educational ATM simulation. The system connects a C++/Qt desktop client to a
+                        Node.js/Express REST API, a MySQL database and a three-service Docker Compose environment
+                        running on an Ubuntu LTS virtual machine in CSC Pouta.</p>
+                    <p>The simulation supports PIN-based authentication, debit and credit accounts, dual cards, balance
+                        queries, withdrawals, deposits, transaction history and timeout behaviour. It is an educational
+                        project, not a production banking system.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section course-proof">
+            <div class="container case-grid">
+                <div>
+                    <p class="eyebrow">Course context</p>
+                    <h2>Software development<br><em>from process to product.</em></h2>
+                </div>
+                <div class="case-copy">
+                    <p class="lead">The project was completed for IN00ED14 Software Development Application Project, a
+                        15-credit course taught in Finnish. I received the grade 5.</p>
+                    <p>The course covered requirements, planning, implementation, testing, documentation, version
+                        control, object-oriented modelling, graphical applications, database architecture and team
+                        communication. Assessment included the working application, schedule, weekly reporting,
+                        documentation, final presentation, GitHub activity, instructor observations, peer evaluation and
+                        self-evaluation.</p>
+                    <p>That context matters: the project was assessed not only as code, but as a documented group
+                        development process with UML-based design, communication and a working system.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section case-dark">
+            <div class="container">
+                <div class="section-heading split-heading">
+                    <div>
+                        <p class="eyebrow eyebrow-light">Architecture</p>
+                        <h2>Several layers.<br><em>One user flow.</em></h2>
+                    </div>
+                    <p class="heading-aside">The interesting part was not one isolated feature. It was getting the
+                        layers to agree with each other.</p>
+                </div>
+                <div class="architecture-grid">
+                    <article><span>01</span>
+                        <h3>Qt desktop client</h3>
+                        <p>C++ and Qt Widgets provide the ATM interface, authentication flow, account selection,
+                            withdrawals, transaction views and inactivity handling.</p>
+                    </article>
+                    <article><span>02</span>
+                        <h3>REST API</h3>
+                        <p>Node.js and Express handle authentication, protected operations, business routes and
+                            communication between the client and database.</p>
+                    </article>
+                    <article><span>03</span>
+                        <h3>Data layer</h3>
+                        <p>MySQL stores customers, accounts, cards, relationships, transactions, PIN-attempt tracking
+                            and withdrawal-limit data.</p>
+                    </article>
+                    <article><span>04</span>
+                        <h3>Deployment</h3>
+                        <p>A three-service Docker Compose environment ran the Node.js/Express API, MySQL and Nginx on
+                            an Ubuntu LTS virtual machine in CSC Pouta. Nginx acted as the reverse proxy and TLS
+                            endpoint
+                            for the project domain.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="section case-section">
+            <div class="container case-grid">
+                <div>
+                    <p class="eyebrow">My contribution</p>
+                    <h2>Infrastructure-minded<br><em>teamwork.</em></h2>
+                </div>
+                <div class="case-copy">
+                    <p class="lead">My main responsibilities were the relational database and the deployment
+                        environment.</p>
+                    <ul class="case-list">
+                        <li>Designed the complete MySQL data model, ER diagram, database structure and seed data.</li>
+                        <li>Modelled customers, accounts, cards, card-account relationships, transactions and
+                            PIN-attempt tracking.</li>
+                        <li>Configured the Ubuntu LTS virtual machine, Docker Compose services, Nginx and TLS.</li>
+                        <li>Created scripts for service management, health checks and database reset.</li>
+                        <li>Supported integration through review, debugging and smaller implementation changes.</li>
+                        <li>Documented the system and produced UML and deployment-related material.</li>
+                    </ul>
+                    <p>The backend components were divided among other team members. On the Qt side, I mainly helped
+                        investigate integration and runtime problems rather than owning a frontend component. The team
+                        used separate Git branches, Kanban, hour tracking and weekly meetings, with pull requests to
+                        the main branch requiring approval from another team member.</p><a class="button button-primary"
+                        href="https://github.com/Jani-OAMK/ATM-group-project" target="_blank"
+                        rel="noopener noreferrer">View source repository <span aria-hidden="true">↗</span></a>
+                    <a class="button button-secondary" href="https://www.youtube.com/watch?v=w5b5Py__Tz0"
+                        target="_blank" rel="noopener noreferrer">Watch demo on YouTube <span
+                            aria-hidden="true">↗</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container"><span>Jani Rekinen · ATM Group Project</span><a href="index.html">All projects</a></div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="LifeHUB web application project by Jani Rekinen.">
+    <title>LifeHUB | Jani Rekinen</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="project-site">
+    <header class="site-header">
+        <nav class="nav container" aria-label="Project navigation">
+            <a class="brand" href="../index.html">JR<span>.</span></a>
+            <a class="back-link" href="index.html">← All projects</a>
+        </nav>
+    </header>
+    <main>
+        <section class="case-hero case-hero-lifehub">
+            <div class="container case-hero-inner">
+                <p class="eyebrow eyebrow-light">02 / Individual course project · OAMK</p>
+                <h1>Life<em>HUB</em></h1>
+                <p class="case-lead">An individual web course project that expanded a basic task-list requirement
+                    into a mobile-oriented browser application for everyday planning and tracking.</p>
+                <div class="case-meta"><span>Individual project</span><span>IN00DL12 · 5 ECTS</span><span>Grade 5 /
+                        5</span><span>Mobile-oriented browser application</span></div>
+            </div>
+        </section>
+        <section class="section case-section">
+            <div class="container case-grid">
+                <div>
+                    <p class="eyebrow">The project</p>
+                    <h2>Course foundation.<br><em>Personal direction.</em></h2>
+                </div>
+                <div class="case-copy">
+                    <p class="lead">LifeHUB was my individual project for the IN00DL12 Web Applications Fundamentals
+                        course, a 5-credit course completed with grade 5/5. A simple task list would have met the basic
+                        project requirement, but I expanded the scope during the course to include shopping, exercise
+                        and food tracking.</p>
+                    <p>The course covered HTML and CSS development, JavaScript object-oriented principles, browser
+                        programming and asynchronous calls. LifeHUB brings those foundations together in a ToDo list,
+                        shopping list, exercise tracking and food logging tool.</p>
+                    <div class="tag-list">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>localStorage</span><span>Open-Meteo
+                            API</span></div>
+                </div>
+            </div>
+        </section>
+        <section class="section course-proof">
+            <div class="container case-grid">
+                <div>
+                    <p class="eyebrow">Course context</p>
+                    <h2>Web foundations.<br><em>Personal product.</em></h2>
+                </div>
+                <div class="case-copy">
+                    <p class="lead">The original course goal was to build a website with HTML and CSS, browser programs
+                        with JavaScript and asynchronous calls from the browser.</p>
+                    <p>The assignment provided room to choose the implementation scope. I used the course to practise a
+                        larger interface with several connected feature areas, local browser storage and external
+                        weather
+                        data.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section case-section">
+            <div class="container case-grid">
+                <div>
+                    <p class="eyebrow">Technical implementation</p>
+                    <h2>A browser app with<br><em>an operations mindset.</em></h2>
+                </div>
+                <div class="case-copy">
+                    <p class="lead">LifeHUB is a client-side application, but the implementation still required the
+                        same questions that matter in larger systems: where state lives, how external data fails, how
+                        the interface behaves on different devices and how the application can be run and tested
+                        consistently.</p>
+                    <p>The application is built with HTML, CSS and JavaScript. Its dashboard and feature views share
+                        browser-side logic, localStorage-backed data and reusable interaction patterns. Open-Meteo is
+                        integrated asynchronously for weather data, while the UI is designed around mobile gestures,
+                        touch targets and clear feedback.</p>
+                    <p>For local development, the project runs through a static HTTP server instead of relying on
+                        file://
+                        browser behaviour. During implementation, I used browser testing, debugging, refactoring and
+                        AI-assisted review while remaining responsible for the final code and decisions.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section case-dark">
+            <div class="container">
+                <div class="section-heading split-heading">
+                    <div>
+                        <p class="eyebrow eyebrow-light">Technical limitations and next steps</p>
+                        <h2>A useful prototype,<br><em>with clear boundaries.</em></h2>
+                    </div>
+                    <p class="heading-aside">The current implementation is a browser project. Its limits also make
+                        the next engineering steps clear.</p>
+                </div>
+                <div class="architecture-grid">
+                    <article><span>01</span>
+                        <h3>Browser storage</h3>
+                        <p>Data is stored in separate localStorage keys for tasks, shopping, exercise and food tracking.
+                            This makes the state easy to inspect but ties it to one browser and origin.</p>
+                    </article>
+                    <article><span>02</span>
+                        <h3>External data</h3>
+                        <p>Weather data is fetched asynchronously from Open-Meteo. Network and data errors are limited
+                            and the interface would benefit from a more useful visible error state.</p>
+                    </article>
+                    <article><span>03</span>
+                        <h3>Data portability</h3>
+                        <p>The application has no export, import or backup feature. Moving to another browser or phone
+                            therefore requires manual access to browser storage.</p>
+                    </article>
+                    <article><span>04</span>
+                        <h3>Next version</h3>
+                        <p>A future version would add visible error states, data export and import, automated tests and
+                            a proper Android implementation with more suitable touch interaction and persistence.</p>
+                    </article>
+                </div>
+                <div class="case-proof-links">
+                    <a class="button button-primary" href="https://github.com/Jaxi84/lifehub-proj" target="_blank"
+                        rel="noopener noreferrer">View source repository <span aria-hidden="true">↗</span></a>
+                    <a class="button button-secondary" href="https://jaxi84.github.io/lifehub-proj/" target="_blank"
+                        rel="noopener noreferrer">Open live demo <span aria-hidden="true">↗</span></a>
+                </div>
+            </div>
+        </section>
+        <section class="section case-dark">
+            <div class="container">
+                <div class="section-heading split-heading">
+                    <div>
+                        <p class="eyebrow eyebrow-light">What I built</p>
+                        <h2>Designed around<br><em>real use.</em></h2>
+                    </div>
+                </div>
+                <div class="architecture-grid">
+                    <article><span>01</span>
+                        <h3>Daily dashboard</h3>
+                        <p>A home view with summaries, quick actions and Oulu weather data from the Open-Meteo API.</p>
+                    </article>
+                    <article><span>02</span>
+                        <h3>Task and shopping lists</h3>
+                        <p>Add, complete, reorder and remove items with browser-based persistence.</p>
+                    </article>
+                    <article><span>03</span>
+                        <h3>Exercise tracking</h3>
+                        <p>Record sessions, durations and activities, then review weekly, monthly and total summaries.
+                        </p>
+                    </article>
+                    <article><span>04</span>
+                        <h3>Food logging</h3>
+                        <p>Record meals by day and mark treats with a deliberately simple visual interaction.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="section case-section">
+            <div class="container case-grid">
+                <div>
+                    <p class="eyebrow">My contribution</p>
+                    <h2>From assignment<br><em>to usable tool.</em></h2>
+                </div>
+                <div class="case-copy">
+                    <p class="lead">I designed and implemented LifeHUB as an individual course project. I chose the
+                        feature scope, designed the navigation and data structures, implemented the views and
+                        interactions, and integrated weather data from Open-Meteo.</p>
+                    <ul class="case-list">
+                        <li>Designed the structure and user flow around personal routines.</li>
+                        <li>Implemented the views, interactions and localStorage data model.</li>
+                        <li>Added mobile-oriented navigation, swipe interactions and large touch targets.</li>
+                        <li>Used API integration for live weather information.</li>
+                        <li>Refactored, debugged and expanded the course foundation through extensive independent
+                            practice.</li>
+                    </ul>
+                    <p>The project taught me that a browser interface designed for mobile use is not automatically
+                        equivalent to a native mobile application. Mouse-based drag-and-drop does not translate directly
+                        to touch interaction, and localStorage makes data difficult to move between devices.</p>
+                    <a class="button button-primary" href="https://www.youtube.com/watch?v=NFSRganMC8c" target="_blank"
+                        rel="noopener noreferrer">Watch demo on YouTube <span aria-hidden="true">↗</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container"><span>Jani Rekinen · LifeHUB</span><a href="index.html">All projects</a></div>
+    </footer>
+</body>
+
+</html>

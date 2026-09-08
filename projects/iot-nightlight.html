@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="IoT Nightlight with Telegram project by Jani Rekinen.">
+    <title>IoT Nightlight | Jani Rekinen</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="project-site">
+    <header class="site-header">
+        <nav class="nav container" aria-label="Project navigation"><a class="brand"
+                href="../index.html">JR<span>.</span></a><a class="back-link" href="index.html">← All projects</a></nav>
+    </header>
+    <main>
+        <section class="case-hero case-hero-iot">
+            <div class="container case-hero-inner">
+                <p class="eyebrow eyebrow-light">06 / Archived project · OSAO</p>
+                <h1>IoT <em>Nightlight</em></h1>
+                <p class="case-lead">An ESP8266-based nightlight controlled through a Telegram bot, with timers, sensor
+                    readings and a practical physical installation.</p>
+                <div class="case-meta"><span>Project from 2021</span><span>ESP8266 hardware</span><span>Still in
+                        practical use</span></div>
+            </div>
+        </section>
+        <section class="section case-section">
+            <div class="container case-grid">
+                <div>
+                    <p class="eyebrow">The project</p>
+                    <h2>Small device.<br><em>Real interaction.</em></h2>
+                </div>
+                <div class="case-copy">
+                    <p class="lead">The device connects to Wi-Fi and communicates with Telegram over HTTPS. Through an
+                        inline keyboard, the user can control the light without needing a separate mobile application.
+                    </p>
+                    <p>Commands include turning the light on or off, timed operation for 10, 20 or 30 minutes,
+                        temperature readings and an LDR-based light check.</p>
+                    <div class="tag-list"><span>ESP8266</span><span>Arduino / C++</span><span>Telegram Bot
+                            API</span><span>WiFiClientSecure</span><span>ArduinoJson</span></div>
+                </div>
+            </div>
+        </section>
+        <section class="section case-dark">
+            <div class="container">
+                <div class="section-heading split-heading">
+                    <div>
+                        <p class="eyebrow eyebrow-light">How it works</p>
+                        <h2>Hardware, network<br><em>and feedback.</em></h2>
+                    </div>
+                </div>
+                <div class="architecture-grid">
+                    <article><span>01</span>
+                        <h3>Connect</h3>
+                        <p>The ESP8266 joins Wi-Fi and establishes secure communication with the Telegram API using
+                            WiFiClientSecure.</p>
+                    </article>
+                    <article><span>02</span>
+                        <h3>Receive</h3>
+                        <p>Telegram long polling receives commands and callback queries from the inline keyboard.</p>
+                    </article>
+                    <article><span>03</span>
+                        <h3>Measure</h3>
+                        <p>Temperature and light sensors share the ESP8266 analog input and are enabled separately for
+                            measurement.</p>
+                    </article>
+                    <article><span>04</span>
+                        <h3>Act</h3>
+                        <p>The main loop controls the light output and turns it off when the selected timer expires.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="section case-section">
+            <div class="container case-grid">
+                <div>
+                    <p class="eyebrow">My contribution</p>
+                    <h2>Where software<br><em>meets a room.</em></h2>
+                </div>
+                <div class="case-copy">
+                    <p class="lead">I built the hardware-oriented solution as part of my ICT studies and connected the
+                        physical light to a chat-based control interface.</p>
+                    <p>The project was built early in my programming studies and before AI-assisted development became
+                        part of my workflow. The physical nightlight has remained in use, which gives the project an
+                        unusually concrete outcome for an early study project.</p>
+                    <p>The archived implementation is not production-ready: credentials, user access control,
+                        reconnection handling and sensor calibration would need a modern security and reliability
+                        review.</p>
+                    <a class="button button-primary" href="https://github.com/Jaxi84/Theses" target="_blank"
+                        rel="noopener noreferrer">View source repository <span aria-hidden="true">↗</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container"><span>Jani Rekinen · IoT Nightlight</span><a href="index.html">All projects</a></div>
+    </footer>
+</body>
+
+</html>

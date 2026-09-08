@@ -1,0 +1,6 @@
+.old/
+.ohjeet/
+.projektit/
+.lahdedata/
+.vscode/
+.env*

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Info-TV information display project by Jani Rekinen.">
+    <title>Info-TV | Jani Rekinen</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="project-site">
+    <header class="site-header">
+        <nav class="nav container" aria-label="Project navigation"><a class="brand"
+                href="../index.html">JR<span>.</span></a><a class="back-link" href="index.html">← All projects</a></nav>
+    </header>
+    <main>
+        <section class="case-hero case-hero-info">
+            <div class="container case-hero-inner">
+                <p class="eyebrow eyebrow-light">05 / Archived project · OSAO</p>
+                <h1>Info-<em>TV</em></h1>
+                <p class="case-lead">An information display system used in a workplace, connecting scheduled media
+                    updates, a browser carousel and an automatically rendered lunch menu.</p>
+                <div class="case-meta"><span>Final project, 2022</span><span>Workplace use during
+                        internship</span><span>Integration project</span></div>
+            </div>
+        </section>
+        <section class="section case-section">
+            <div class="container case-grid">
+                <div>
+                    <p class="eyebrow">The project</p>
+                    <h2>A screen that<br><em>keeps itself current.</em></h2>
+                </div>
+                <div class="case-copy">
+                    <p class="lead">Info-TV combines a local web display with automated content handling. Images are
+                        downloaded from Google Drive, displayed in a Bootstrap carousel and refreshed regularly in the
+                        browser.</p>
+                    <p>A PHP script parses a restaurant's online lunch menu, renders it as an image and uploads it to
+                        Google Drive. A Python downloader then makes that content available to the display.</p>
+                    <div class="tag-list"><span>Python</span><span>PHP</span><span>HTML / JavaScript</span><span>Google
+                            Drive API</span><span>Bootstrap</span></div>
+                </div>
+            </div>
+        </section>
+        <section class="section case-dark">
+            <div class="container">
+                <div class="section-heading split-heading">
+                    <div>
+                        <p class="eyebrow eyebrow-light">System flow</p>
+                        <h2>Content in motion.</h2>
+                    </div>
+                </div>
+                <div class="architecture-grid">
+                    <article><span>01</span>
+                        <h3>Collect</h3>
+                        <p>The Python downloader authenticates with Google Drive and retrieves image content into a
+                            temporary directory.</p>
+                    </article>
+                    <article><span>02</span>
+                        <h3>Prepare</h3>
+                        <p>The PHP menu tool extracts restaurant data and renders it as a PNG for consistent display.
+                        </p>
+                    </article>
+                    <article><span>03</span>
+                        <h3>Display</h3>
+                        <p>PHP scans the media directory and presents images through a Bootstrap carousel with the
+                            current ISO week.</p>
+                    </article>
+                    <article><span>04</span>
+                        <h3>Refresh</h3>
+                        <p>The browser reloads periodically so the screen can keep showing updated material without
+                            manual intervention.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="section case-section">
+            <div class="container case-grid">
+                <div>
+                    <p class="eyebrow">My contribution</p>
+                    <h2>Learning through<br><em>integration.</em></h2>
+                </div>
+                <div class="case-copy">
+                    <p class="lead">I designed and implemented the project as an ambitious vocational-study final
+                        project and used it in a real workplace context during my internship.</p>
+                    <p>The project was built early in my programming studies and before AI-assisted development became
+                        part of my workflow. It is preserved as an educational archive and demonstrates my early
+                        interest in practical
+                        automation, APIs, web applications and connecting separate systems.</p>
+                    <p>It would need dependency updates, stronger credential handling, validation and monitoring before
+                        modern reuse.</p>
+                    <a class="button button-primary" href="https://github.com/Jaxi84/Theses" target="_blank"
+                        rel="noopener noreferrer">View source repository <span aria-hidden="true">↗</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container"><span>Jani Rekinen · Info-TV</span><a href="index.html">All projects</a></div>
+    </footer>
+</body>
+
+</html>
