@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Movie App, an OAMK full-stack team project where Jani Rekinen worked as Scrum Master and developer.">
+    <title>Movie App | Jani Rekinen</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="project-site">
+    <header class="site-header">
+        <nav class="nav container" aria-label="Project navigation">
+            <a class="brand" href="../index.html" aria-label="Back to Jani Rekinen home">JR<span>.</span></a>
+            <a class="back-link" href="index.html">← All projects</a>
+        </nav>
+    </header>
+    <main>
+        <section class="case-hero" aria-labelledby="movie-app-title">
+            <div class="container case-hero-inner">
+                <p class="eyebrow eyebrow-light">University team project · OAMK</p>
+                <h1 id="movie-app-title">Movie<br><em>App</em></h1>
+                <p class="case-lead">A full-stack movie and TV application built by a four-person team. I was the
+                    Scrum Master throughout the project and also contributed to the implementation.</p>
+                <div class="case-meta">
+                    <span>Team of four</span>
+                    <span>Advanced Web Applications Project · 15 ECTS</span>
+                    <span>Course grade 5 / 5</span>
+                    <span>Eight-week Scrum project · 2026</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section case-section">
+            <div class="container case-grid">
+                <div>
+                    <p class="eyebrow">The project</p>
+                    <h2>Find a film.<br><em>Share the conversation.</em></h2>
+                </div>
+                <div class="case-copy">
+                    <p class="lead">Our team built a web application for discovering movies and TV shows, saving
+                        favourites, writing reviews and sharing media through groups.</p>
+                    <p>The application uses TMDB for movie and TV data. Registered users can manage favourites and
+                        reviews, create groups, request membership and share media with other group members. Group
+                        owners can manage membership requests and members.</p>
+                    <p>This was an assessed university project completed by a four-person team. The application
+                        demonstrates our course work; it is not presented as a production service.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section course-proof">
+            <div class="container case-grid">
+                <div>
+                    <p class="eyebrow">Course context</p>
+                    <h2>Advanced Web<br><em>Applications Project.</em></h2>
+                </div>
+                <div class="case-copy">
+                    <p class="lead">The project was completed as part of a 15-credit Oulu University of Applied
+                        Sciences course. I received grade 5.</p>
+                    <p>Over eight weeks, the team used Scrum to plan and deliver the application in short iterations.
+                        My role combined Scrum Master responsibilities for the whole project with selected development
+                        work.</p>
+                    <p>Movie App is a separate course project from my ATM Group Project. The projects had different
+                        teams, goals and technical work.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section case-dark">
+            <div class="container">
+                <div class="section-heading split-heading">
+                    <div>
+                        <p class="eyebrow eyebrow-light">The application</p>
+                        <h2>Frontend to data.<br><em>One shared product.</em></h2>
+                    </div>
+                    <p class="heading-aside">The team connected a responsive interface, application logic and
+                        persistent data around shared movie and TV experiences.</p>
+                </div>
+                <div class="architecture-grid">
+                    <article>
+                        <span>01</span>
+                        <h3>Frontend</h3>
+                        <p>React and Vite power the browser interface for searching, viewing details and using account
+                            and group features.</p>
+                    </article>
+                    <article>
+                        <span>02</span>
+                        <h3>Backend</h3>
+                        <p>A Node.js HTTP backend provides application routes and services for the frontend.</p>
+                    </article>
+                    <article>
+                        <span>03</span>
+                        <h3>Data and identity</h3>
+                        <p>PostgreSQL stores users, favourites, reviews, groups, memberships and shared media. The
+                            application uses JWT access and refresh tokens for authentication.</p>
+                    </article>
+                    <article>
+                        <span>04</span>
+                        <h3>Integration and delivery</h3>
+                        <p>TMDB supplies movie and TV information. Docker Compose supports the development environment
+                            and GitHub Actions runs the project CI workflow.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section case-section">
+            <div class="container case-grid">
+                <div>
+                    <p class="eyebrow">My contribution</p>
+                    <h2>Team facilitation<br><em>and development.</em></h2>
+                </div>
+                <div class="case-copy">
+                    <p class="lead">I was the Scrum Master for the full project and helped the team keep its work,
+                        decisions and progress visible.</p>
+                    <ul class="case-list">
+                        <li>Facilitated Scrum events from Sprint 0 through Sprint 6 and maintained the team's working
+                            practices and project documentation.</li>
+                        <li>Created and configured the team's Jira and Confluence spaces, then maintained their
+                            settings and access. I arranged an extension to Atlassian's default 30-day trial.</li>
+                        <li>Set up Jira work logging and reporting, and connected Jira with GitHub.</li>
+                        <li>Documented ways of working, the Definition of Done, meeting notes and retrospectives in
+                            Confluence.</li>
+                        <li>Implemented the user account deletion endpoint, removing related user data in a database
+                            transaction, and wrote Jest tests for the deletion logic and Supertest-based tests for the
+                            authenticated REST endpoint.</li>
+                        <li>Built the first version of the movie and TV search feature.</li>
+                        <li>Contributed to group features, including early frontend work on the Groups page.</li>
+                        <li>Created the starting template for the team's project presentation website.</li>
+                    </ul>
+                    <p>The group features were developed by the team. My contribution to the Groups page was an initial
+                        foundation, not ownership of the complete feature.</p>
+                    <div class="case-proof-links">
+                        <a class="button button-primary" href="https://github.com/tvt25kmo-group7/tvt25kmo-group7-movie-app"
+                            target="_blank" rel="noopener noreferrer">View source repository <span
+                                aria-hidden="true">↗</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section course-proof">
+            <div class="container case-grid">
+                <div>
+                    <p class="eyebrow">What I learned</p>
+                    <h2>Building while<br><em>helping a team deliver.</em></h2>
+                </div>
+                <div class="case-copy">
+                    <p class="lead">The project gave me practice balancing team facilitation with hands-on
+                        development.</p>
+                    <p>I learned to make team processes visible through Jira and Confluence while contributing to a
+                        shared application. On the development side, the project strengthened my experience with
+                        React, REST APIs, PostgreSQL-backed features and automated testing.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container"><span>Jani Rekinen · Movie App</span><a href="index.html">All projects</a></div>
+    </footer>
+</body>
+
+</html>
